@@ -1,0 +1,10 @@
+
+/* 阻止全屏后的黑屏效果 */
+:not(:root):fullscreen::backdrop {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: white;
+}
