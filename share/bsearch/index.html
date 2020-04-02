@@ -105,6 +105,7 @@
       diff := nums[middle] - target
       switch {
       case diff == 0:
+        // 到头了 或 前一个值不等于目标值
         if (middle == 0) || (nums[middle-1] != target) {
           return middle
         } else {
@@ -130,6 +131,7 @@
       diff := nums[middle] - target
       switch {
       case diff == 0:
+        // 到尾了 或 后一个值不等于目标值
         if (middle == len(nums)-1) || (nums[middle+1] != target) {
           return middle
         } else {
@@ -157,6 +159,7 @@
       case diff < 0:
         low = middle + 1
       case diff >= 0:
+        // 到头了 或 前一个值小于目标值
         if (middle == 0) || (nums[middle-1] < target) {
           return middle
         } else {
@@ -178,6 +181,7 @@
       diff := nums[middle] - target
       switch {
       case diff <= 0:
+        // 到尾了 或 后一个值大于目标值
         if (middle == len(nums)-1) || (nums[middle+1] > target) {
           return middle
         } else {
