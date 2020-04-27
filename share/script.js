@@ -7,3 +7,5 @@ document.getElementById("body").ondblclick = () => {
   }
   fullScreen = !fullScreen
 }
+
+impress().init();
